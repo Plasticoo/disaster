@@ -167,8 +167,8 @@ is used."
               (with-current-buffer asmbuf
                 ;; saveplace.el will prevent us from hopping to a line.
                 (set (make-local-variable 'save-place) nil)
-                (asm-mode)
-                (disaster--shadow-non-assembly-code))
+                (if (fboundp 'nasm-mode) (nasm-mode) (asm-mode))
+                (disaster--shadow-non-assembly-code)))
               (let ((oldbuf (current-buffer)))
                 (switch-to-buffer-other-window asmbuf)
                 (goto-char 0)
