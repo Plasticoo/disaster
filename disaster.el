@@ -168,6 +168,7 @@ is used."
                 ;; saveplace.el will prevent us from hopping to a line.
                 (set (make-local-variable 'save-place) nil)
                 (if (fboundp 'nasm-mode) (nasm-mode) (asm-mode))
+				(setq show-trailing-whitespace nil)
                 (disaster--shadow-non-assembly-code))
               (let ((oldbuf (current-buffer)))
                 (switch-to-buffer-other-window asmbuf)
