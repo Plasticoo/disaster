@@ -185,7 +185,7 @@ is used."
                                                    (point)))
                                    'face 'region))
                     (message "Couldn't find corresponding assembly line."))
-                (switch-to-buffer-other-window disaster-buffer-assembly)
+                (switch-to-buffer disaster-buffer-assembly)
 				(goto-char 0)
 				))
           (with-current-buffer makebuf
