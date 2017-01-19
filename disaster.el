@@ -188,7 +188,8 @@ is used."
                     (message "Couldn't find corresponding assembly line."))
                 (switch-to-buffer disaster-buffer-assembly)
 				(goto-char 0)
-				))
+				)
+		    (delete-file obj-file))
           (with-current-buffer makebuf
             (save-excursion
               (goto-char 0)
